@@ -5,6 +5,12 @@ import storeData from './data1.json'; // Store data
 
 const GOOGLE_API_KEY = 'AIzaSyAI_O0v5aCYbOeTriXuQjxgglTcQZNce8w'; // Replace with your Google Maps API key
 
+declare global {
+  interface Window {
+    initMap: () => void;
+  }
+}
+
 export default function GoogleMap({ opacity }: { opacity: number }) {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<google.maps.Map | null>(null);
@@ -44,7 +50,7 @@ export default function GoogleMap({ opacity }: { opacity: number }) {
             },
           });
 
-          const circle = new google.maps.Circle({
+          new google.maps.Circle({
             map: mapInstance.current,
             center: { lat: item.Latitude, lng: item.Longitude },
             radius: 1000, // 5 km radius

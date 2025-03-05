@@ -7,8 +7,6 @@ import {
   Upload,
   Brain,
   FileText,
-  Store,
-  MessageSquare,
   BarChart3,
 } from 'lucide-react';
 

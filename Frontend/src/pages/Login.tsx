@@ -26,7 +26,7 @@ const loginSchema = yup.object({
 type LoginFormData = yup.InferType<typeof loginSchema>;
 
 export function Login() {
-  const { login, isLoading, error, clearError } = useAuthStore();
+  const { login, isLoading, error } = useAuthStore();
   const [showPassword, setShowPassword] = useState(false);
 
   const form = useForm<LoginFormData>({

@@ -33,7 +33,7 @@ const registerSchema = yup.object({
 type RegisterFormData = yup.InferType<typeof registerSchema>;
 
 export function Register() {
-  const { register, isLoading, error, clearError } = useAuthStore();
+  const { register, isLoading, error } = useAuthStore();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 

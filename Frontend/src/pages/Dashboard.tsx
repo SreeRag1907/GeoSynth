@@ -1,10 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   BarChart3,
-  MapPin,
   Users,
   Clock,
-  TrendingUp,
   Building2,
   User,
   LogOut,
@@ -22,10 +20,17 @@ import vimananagarMonthlyAnalysis from './data/viman_nagar_monthly_analysis.json
 
 const cityNames = ["Baner", "Hinjewadi", "Koregaon Park", "Kothrud", "Viman Nagar"]; // Add your city names here
 
+interface Stat {
+  name: string;
+  value: string;
+  icon: React.ComponentType<any>;
+  change: string;
+  changeType: 'positive' | 'negative';
+}
+
 export default function Dashboard() {
-  const [opacity, setOpacity] = useState([0.7]);
-  const [selectedCity, setSelectedCity] = useState("Baner");
-  const [stats, setStats] = useState([]);
+  const [selectedCity, setSelectedCity] = useState<string>("Baner");
+  const [stats, setStats] = useState<Stat[]>([]);
   const navigate = useNavigate();
   const userName = localStorage.getItem('userName'); // Retrieve the user's name from local storage
 
@@ -50,11 +55,11 @@ export default function Dashboard() {
     }
   };
 
-  const calculateStats = (data) => {
-    const totalOrders = data.reduce((sum, item) => sum + item["Orders per Day"], 0);
+  const calculateStats = (data: any[]) => {
+    const totalOrders = data.reduce((sum: number, item: any) => sum + item["Orders per Day"], 0);
     const activeStores = data.length;
-    const customerReach = data.reduce((sum, item) => sum + item["Orders per Day"], 0); // Assuming customer reach is the total orders
-    const avgDeliveryTime = (data.reduce((sum, item) => sum + item["Average Delivery Time (minutes)"], 0) / data.length).toFixed(1);
+    const customerReach = data.reduce((sum: number, item: any) => sum + item["Orders per Day"], 0); // Assuming customer reach is the total orders
+    const avgDeliveryTime = (data.reduce((sum: number, item: any) => sum + item["Average Delivery Time (minutes)"], 0) / data.length).toFixed(1);
 
     return [
       {
@@ -66,7 +71,7 @@ export default function Dashboard() {
       },
       {
         name: 'Active Stores',
-        value: activeStores,
+        value: activeStores.toString(),
         icon: Building2,
         change: '+2', // Placeholder value
         changeType: 'positive', // Placeholder value
@@ -191,7 +196,7 @@ export default function Dashboard() {
             <CardTitle>Hot Zones</CardTitle>
           </CardHeader>
           <CardContent>
-            <GoogleMap opacity={opacity[0]} />
+            <GoogleMap />
           </CardContent>
         </Card>
       </div>
