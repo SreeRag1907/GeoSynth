@@ -67,28 +67,28 @@ export default function Dashboard() {
         value: totalOrders.toLocaleString(),
         icon: BarChart3,
         change: '+12.3%', // Placeholder value
-        changeType: 'positive', // Placeholder value
+        changeType: 'positive' as 'positive', // Placeholder value
       },
       {
         name: 'Active Stores',
         value: activeStores.toString(),
         icon: Building2,
         change: '+2', // Placeholder value
-        changeType: 'positive', // Placeholder value
+        changeType: 'positive' as 'positive', // Placeholder value
       },
       {
         name: 'Customer Reach',
         value: customerReach.toLocaleString(),
         icon: Users,
         change: '+15.3%', // Placeholder value
-        changeType: 'positive', // Placeholder value
+        changeType: 'positive' as 'positive', // Placeholder value
       },
       {
         name: 'Avg. Delivery Time',
         value: `${avgDeliveryTime}m`,
         icon: Clock,
         change: '-2.3m', // Placeholder value
-        changeType: 'positive', // Placeholder value
+        changeType: 'positive' as 'positive', // Placeholder value
       },
     ];
   };
@@ -196,7 +196,7 @@ export default function Dashboard() {
             <CardTitle>Hot Zones</CardTitle>
           </CardHeader>
           <CardContent>
-            <GoogleMap />
+            <GoogleMap opacity={0.7} />
           </CardContent>
         </Card>
       </div>
