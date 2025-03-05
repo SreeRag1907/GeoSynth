@@ -1,0 +1,62 @@
+[
+  {
+    "store_id": 1,
+    "region_id": 101,
+    "latitude": 12.9716,
+    "longitude": 77.5946,
+    "foot_traffic": 500,
+    "customer_id": 101,
+    "population_density": 1000,
+    "avg_income": 50000,
+    "demand_score": 70,
+    "average_income": 88635
+  },
+  {
+    "store_id": 2,
+    "region_id": 102,
+    "latitude": 12.2958,
+    "longitude": 76.6394,
+    "foot_traffic": 600,
+    "customer_id": 102,
+    "population_density": 1500,
+    "avg_income": 60000,
+    "demand_score": 80,
+    "average_income": 79258
+  },
+  {
+    "store_id": 3,
+    "region_id": 103,
+    "latitude": 12.9141,
+    "longitude": 74.856,
+    "foot_traffic": 750,
+    "customer_id": 103,
+    "population_density": 1200,
+    "avg_income": 55000,
+    "demand_score": 75,
+    "average_income": 40224
+  },
+  {
+    "store_id": 4,
+    "region_id": 104,
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "foot_traffic": 800,
+    "customer_id": 104,
+    "population_density": 1100,
+    "avg_income": 52000,
+    "demand_score": 65,
+    "average_income": 57894
+  },
+  {
+    "store_id": 5,
+    "region_id": 105,
+    "latitude": 11.0168,
+    "longitude": 76.9558,
+    "foot_traffic": 450,
+    "customer_id": 105,
+    "population_density": 1300,
+    "avg_income": 48000,
+    "demand_score": 60,
+    "average_income": 82209
+  }
+]
