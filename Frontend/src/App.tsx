@@ -15,7 +15,6 @@ import Layout from '@/components/layout';
 import LandingPage from '@/pages/landing';
 import HeatmapAnalytics from '@/pages/heatmap-analytics';
 import CompetitorAnalysis from '@/pages/competitor-analysis';
-import LocationExplorer from '@/pages/location-explorer';
 import AIInsightsHub from '@/pages/ai-insights';
 import DataManagement from '@/pages/data-management';
 import ReportsAnalytics from '@/pages/reports';
@@ -42,7 +41,6 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/heatmap" element={<HeatmapAnalytics />} />
             <Route path="/competitors" element={<CompetitorAnalysis />} />
-            <Route path="/locations" element={<LocationExplorer />} />
             <Route path="/ai-insights" element={<AIInsightsHub />} />
             <Route path="/data" element={<DataManagement />} />
             <Route path="/reports" element={<ReportsAnalytics />} />

@@ -1,36 +1,16 @@
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Slider } from '@/components/ui/slider';
-import { Calendar } from '@/components/ui/calendar';
-import { MapPin, Calendar as CalendarIcon, Layers } from 'lucide-react';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
-import HereMap from './HereMap';
+import { MapPin } from 'lucide-react';
+
+import GoogleMap from './GoogleMap';
 
 export default function HeatmapAnalytics() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
   const [opacity, setOpacity] = useState([0.7]);
 
-  const [heatmapData, setHeatmapData] = useState([
-    { lat: 18.5204, lng: 73.8567, value: 0.8 }, // Pune City Center
-    { lat: 18.5314, lng: 73.8446, value: 0.6 }, // Koregaon Park
-    { lat: 18.5167, lng: 73.8414, value: 0.7 }, // Camp Area
-    { lat: 18.5679, lng: 73.9143, value: 0.9 }, // Viman Nagar
-    { lat: 18.5018, lng: 73.8636, value: 0.5 }, // Swargate
-  ]);
-
+  
   return (
     <div className="space-y-8">
       <div>
@@ -41,43 +21,10 @@ export default function HeatmapAnalytics() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-4">
-        <Card className="md:col-span-3">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0">
-            <CardTitle>Interactive Heatmap</CardTitle>
-            <div className="flex items-center gap-2">
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button variant="outline" className="w-[240px] justify-start text-left font-normal">
-                    <CalendarIcon className="mr-2 h-4 w-4" />
-                    {date ? date.toLocaleDateString() : "Pick a date"}
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="end">
-                  <Calendar
-                    mode="single"
-                    selected={date}
-                    onSelect={setDate}
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
-              <Select defaultValue="orders">
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Select data type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="orders">Order Density</SelectItem>
-                  <SelectItem value="revenue">Revenue</SelectItem>
-                  <SelectItem value="delays">Delivery Delays</SelectItem>
-                  <SelectItem value="demographics">Demographics</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </CardHeader>
-          <CardContent>
-          <HereMap heatmapData={heatmapData} opacity={opacity[0]} />
-          </CardContent>
-        </Card>
+        <div className="md:col-span-3">
+          
+          <GoogleMap opacity={opacity[0]} />
+        </div>
 
         <div className="space-y-4">
           <Card>
@@ -99,19 +46,7 @@ export default function HeatmapAnalytics() {
                   step={0.1}
                 />
               </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Visible Layers</label>
-                <div className="space-y-2">
-                  {['Orders', 'Revenue', 'Delays', 'Demographics'].map((layer) => (
-                    <div key={layer} className="flex items-center space-x-2">
-                      <Button variant="outline" size="sm" className="w-full justify-start">
-                        <Layers className="mr-2 h-4 w-4" />
-                        {layer}
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              </div>
+             
             </CardContent>
           </Card>
 
