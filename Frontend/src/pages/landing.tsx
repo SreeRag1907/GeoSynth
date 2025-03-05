@@ -11,7 +11,7 @@ export default function LandingPage() {
           <span className="ml-2 text-2xl font-bold">GeoSynth</span>
         </Link>
         <nav className="ml-auto flex gap-4">
-          <Link to="/dashboard">
+          <Link to="/login">
             <Button variant="ghost">Dashboard</Button>
           </Link>
         </nav>
@@ -28,7 +28,7 @@ export default function LandingPage() {
                   Make data-driven decisions for your retail locations using advanced heatmap analytics and AI-powered recommendations.
                 </p>
               </div>
-              <Link to="/dashboard">
+              <Link to="/login">
                 <Button size="lg" className="mt-4">Get Started</Button>
               </Link>
             </div>

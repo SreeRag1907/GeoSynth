@@ -1,26 +1,13 @@
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Slider } from '@/components/ui/slider';
-import { Calendar } from '@/components/ui/calendar';
-import { MapPin, Calendar as CalendarIcon, Layers } from 'lucide-react';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
+import { MapPin } from 'lucide-react';
+
 import GoogleMap from './GoogleMap';
 
 export default function HeatmapAnalytics() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
   const [opacity, setOpacity] = useState([0.7]);
 
   
@@ -59,19 +46,7 @@ export default function HeatmapAnalytics() {
                   step={0.1}
                 />
               </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Visible Layers</label>
-                <div className="space-y-2">
-                  {['Orders', 'Revenue', 'Delays', 'Demographics'].map((layer) => (
-                    <div key={layer} className="flex items-center space-x-2">
-                      <Button variant="outline" size="sm" className="w-full justify-start">
-                        <Layers className="mr-2 h-4 w-4" />
-                        {layer}
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              </div>
+             
             </CardContent>
           </Card>
 
