@@ -1,4 +1,7 @@
 import mongoose, { model, Schema } from 'mongoose';
+import AutoIncrementFactory from 'mongoose-sequence';
+
+const AutoIncrement = AutoIncrementFactory(mongoose);
 
 const storeSchema = new Schema(
 	{
@@ -12,9 +15,15 @@ const storeSchema = new Schema(
 			required: true,
 		},
 		location: {
-			type: Point,
-			coordinates: [Number, Number],
-			required: true,
+			type: {
+				type: String,
+				enum: ['Point'],
+				required: true,
+			},
+			coordinates: {
+				type: [Number],
+				required: true,
+			},
 		},
 		rent: {
 			type: Number,
