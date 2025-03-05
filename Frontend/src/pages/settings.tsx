@@ -21,6 +21,7 @@ export default function SettingsPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
+        {/* Profile Settings */}
         <Card>
           <CardHeader>
             <CardTitle>Profile Settings</CardTitle>
@@ -38,6 +39,7 @@ export default function SettingsPage() {
           </CardContent>
         </Card>
 
+        {/* API Settings */}
         <Card>
           <CardHeader>
             <CardTitle>API Settings</CardTitle>
@@ -64,6 +66,7 @@ export default function SettingsPage() {
           </CardContent>
         </Card>
 
+        {/* Data Preferences */}
         <Card className="md:col-span-2">
           <CardHeader>
             <CardTitle>Data Preferences</CardTitle>
