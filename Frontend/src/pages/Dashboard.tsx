@@ -7,8 +7,8 @@ import {
   TrendingUp,
   Building2,
 } from 'lucide-react';
-import HereMap from './HereMap';
 import { useState } from 'react';
+import GoogleMap from './GoogleMap';
 
 const stats = [
   {
@@ -109,7 +109,7 @@ export default function Dashboard() {
             <CardTitle>Hot Zones</CardTitle>
           </CardHeader>
           <CardContent>
-                    <HereMap heatmapData={heatmapData} opacity={opacity[0]} />
+                    <GoogleMap heatmapData={heatmapData} opacity={opacity[0]} />
                     </CardContent>
         </Card>
       </div>

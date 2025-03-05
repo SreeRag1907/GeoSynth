@@ -42,7 +42,6 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/heatmap" element={<HeatmapAnalytics />} />
             <Route path="/competitors" element={<CompetitorAnalysis />} />
-            <Route path="/locations" element={<LocationExplorer />} />
             <Route path="/ai-insights" element={<AIInsightsHub />} />
             <Route path="/data" element={<DataManagement />} />
             <Route path="/reports" element={<ReportsAnalytics />} />

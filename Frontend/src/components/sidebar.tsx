@@ -8,8 +8,6 @@ import {
   Brain,
   FileText,
   Store,
-  Map,
-  HelpCircle,
   MessageSquare,
   BarChart3,
 } from 'lucide-react';
@@ -18,7 +16,6 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Heatmap Analytics', href: '/heatmap', icon: MapPin },
   { name: 'Competitor Analysis', href: '/competitors', icon: Store },
-  { name: 'Location Explorer', href: '/locations', icon: Map },
   { name: 'AI Insights Hub', href: '/ai-insights', icon: Brain },
   { name: 'Data Management', href: '/data', icon: Upload },
   { name: 'Reports & Analytics', href: '/reports', icon: BarChart3 },
