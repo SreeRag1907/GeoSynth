@@ -5,9 +5,9 @@ import { ApiResponse } from '../utils/ApiResponse.utils.js';
 import { AsyncHandler } from '../utils/AsyncHandler.utils.js';
 
 const registerStore = AsyncHandler(async (req, res) => {
-	const { name, location, rent, cityName } = req.body;
+	const { name, longitude, latitude, rent, cityName } = req.body;
 
-	if (!name || !location || !rent || !cityName) {
+	if (!name || !longitude || !latitude || !rent || !cityName) {
 		throw new ApiError(400, 'all fields are required...');
 	}
 
@@ -30,7 +30,7 @@ const registerStore = AsyncHandler(async (req, res) => {
 		name,
 		location: {
 			type: 'Point',
-			coordinates: [location.lat, location.lng],
+			coordinates: [longitude, latitude],
 		},
 		rent,
 	});
@@ -46,7 +46,7 @@ const registerStore = AsyncHandler(async (req, res) => {
 	);
 
 	if (!updateCity) {
-		Store.deleteOne({ _id: store._id });
+		await Store.deleteOne({ _id: store._id });
 		throw new ApiError(400, 'store not created...');
 	}
 

@@ -1,17 +1,16 @@
 import mongoose, { model, Schema } from 'mongoose';
-import AutoIncrementFactory from 'mongoose-sequence';
 
-const AutoIncrement = AutoIncrementFactory(mongoose);
-
-const storeSchema = new Schema(
+const customerSchema = new Schema(
 	{
-		storeNo: {
-			type: Number,
-			required: true,
-		},
 		name: {
 			type: String,
 			required: true,
+		},
+		email: {
+			type: String,
+			required: true,
+			unique: true,
+			lowercase: true,
 		},
 		location: {
 			type: {
@@ -24,18 +23,6 @@ const storeSchema = new Schema(
 				required: true,
 			},
 		},
-		rent: {
-			type: Number,
-			required: true,
-		},
-		totalOrders: {
-			type: Number,
-			default: 0,
-		},
-		revenue: {
-			type: Number,
-			default: 0,
-		},
 		orders: [
 			{
 				type: Schema.Types.ObjectId,
@@ -46,4 +33,4 @@ const storeSchema = new Schema(
 	{ timestamps: true }
 );
 
-export const Store = model('Store', storeSchema);
+export const Customer = model('Customer', customerSchema);
