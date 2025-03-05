@@ -11,9 +11,8 @@ export default function GoogleMap({ opacity }: { opacity: number }) {
 
   useEffect(() => {
     const heatmapData = locationData.map((item) => ({
-      lat: item.latitude,
-      lng: item.longitude,
-      value: item.foot_traffic, // Optional weight for intensity
+      lat: item["Location (Latitude)"],
+      lng: item["Location (Longitude)"],
     }));
 
     const initMap = () => {
@@ -32,26 +31,6 @@ export default function GoogleMap({ opacity }: { opacity: number }) {
         });
 
         heatmapLayer.current.setMap(mapInstance.current);
-
-        // Add Store Markers and Circles
-        locationData.forEach((item) => {
-          const marker = new google.maps.Marker({
-            position: { lat: item.latitude, lng: item.longitude },
-            map: mapInstance.current,
-            title: `Store ${item.store_id}`,
-          });
-
-          const circle = new google.maps.Circle({
-            map: mapInstance.current,
-            center: { lat: item.latitude, lng: item.longitude },
-            radius: 500, // 5 km radius
-            strokeColor: '#0000FF',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#0000FF',
-            fillOpacity: 0.1,
-          });
-        });
       }
     };
 

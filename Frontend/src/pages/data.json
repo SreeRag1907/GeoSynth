@@ -1,62 +1,1402 @@
 [
   {
-    "store_id": 1,
-    "region_id": 101,
-    "latitude": 12.9716,
-    "longitude": 77.5946,
-    "foot_traffic": 500,
-    "customer_id": 101,
-    "population_density": 1000,
-    "avg_income": 50000,
-    "demand_score": 70,
-    "average_income": 88635
+    "Customer ID": "CUST001",
+    "Name": "Harry Robinson",
+    "Location (Latitude)": 18.506247,
+    "Location (Longitude)": 73.916021,
+    "Preferred Store": "Hadapsar"
   },
   {
-    "store_id": 2,
-    "region_id": 102,
-    "latitude": 12.2958,
-    "longitude": 76.6394,
-    "foot_traffic": 600,
-    "customer_id": 102,
-    "population_density": 1500,
-    "avg_income": 60000,
-    "demand_score": 80,
-    "average_income": 79258
+    "Customer ID": "CUST002",
+    "Name": "Adrienne Davis",
+    "Location (Latitude)": 18.5894,
+    "Location (Longitude)": 73.778749,
+    "Preferred Store": "Pimple Saudagar"
   },
   {
-    "store_id": 3,
-    "region_id": 103,
-    "latitude": 12.9141,
-    "longitude": 74.856,
-    "foot_traffic": 750,
-    "customer_id": 103,
-    "population_density": 1200,
-    "avg_income": 55000,
-    "demand_score": 75,
-    "average_income": 40224
+    "Customer ID": "CUST003",
+    "Name": "Lisa Jenkins",
+    "Location (Latitude)": 18.572965,
+    "Location (Longitude)": 73.769411,
+    "Preferred Store": "Baner"
   },
   {
-    "store_id": 4,
-    "region_id": 104,
-    "latitude": 13.0827,
-    "longitude": 80.2707,
-    "foot_traffic": 800,
-    "customer_id": 104,
-    "population_density": 1100,
-    "avg_income": 52000,
-    "demand_score": 65,
-    "average_income": 57894
+    "Customer ID": "CUST004",
+    "Name": "Michael Mcintosh",
+    "Location (Latitude)": 18.509253,
+    "Location (Longitude)": 73.932524,
+    "Preferred Store": "Hadapsar"
   },
   {
-    "store_id": 5,
-    "region_id": 105,
-    "latitude": 11.0168,
-    "longitude": 76.9558,
-    "foot_traffic": 450,
-    "customer_id": 105,
-    "population_density": 1300,
-    "avg_income": 48000,
-    "demand_score": 60,
-    "average_income": 82209
+    "Customer ID": "CUST005",
+    "Name": "Stephen Hill",
+    "Location (Latitude)": 18.553026,
+    "Location (Longitude)": 73.799263,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST006",
+    "Name": "Michelle Solis",
+    "Location (Latitude)": 18.526729,
+    "Location (Longitude)": 73.851633,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST007",
+    "Name": "Robert Craig",
+    "Location (Latitude)": 18.59678,
+    "Location (Longitude)": 73.757817,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST008",
+    "Name": "Steven Jacobson",
+    "Location (Latitude)": 18.625507,
+    "Location (Longitude)": 73.798665,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST009",
+    "Name": "Jennifer Reed",
+    "Location (Latitude)": 18.553737,
+    "Location (Longitude)": 73.813326,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST010",
+    "Name": "Samuel Simmons",
+    "Location (Latitude)": 18.60062,
+    "Location (Longitude)": 73.736092,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST011",
+    "Name": "Zachary Khan",
+    "Location (Latitude)": 18.513755,
+    "Location (Longitude)": 73.840228,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST012",
+    "Name": "Ryan Bullock",
+    "Location (Latitude)": 18.516188,
+    "Location (Longitude)": 73.775369,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST013",
+    "Name": "Michael Wilson",
+    "Location (Latitude)": 18.570592,
+    "Location (Longitude)": 73.782771,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST014",
+    "Name": "Robert Moss",
+    "Location (Latitude)": 18.541439,
+    "Location (Longitude)": 73.892148,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST015",
+    "Name": "Jennifer Bowman",
+    "Location (Latitude)": 18.596777,
+    "Location (Longitude)": 73.747331,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST016",
+    "Name": "Kathy Harper",
+    "Location (Latitude)": 18.565257,
+    "Location (Longitude)": 73.770414,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST017",
+    "Name": "Joy Williamson",
+    "Location (Latitude)": 18.519673,
+    "Location (Longitude)": 73.840472,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST018",
+    "Name": "Danny Estrada",
+    "Location (Latitude)": 18.521643,
+    "Location (Longitude)": 73.841017,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST019",
+    "Name": "Rita Burns",
+    "Location (Latitude)": 18.504933,
+    "Location (Longitude)": 73.875385,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST020",
+    "Name": "Dana Willis",
+    "Location (Latitude)": 18.572523,
+    "Location (Longitude)": 73.766984,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST021",
+    "Name": "Rachael Harrison",
+    "Location (Latitude)": 18.518607,
+    "Location (Longitude)": 73.774185,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST022",
+    "Name": "Kristin Gonzalez",
+    "Location (Latitude)": 18.528914,
+    "Location (Longitude)": 73.850206,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST023",
+    "Name": "David Wheeler",
+    "Location (Latitude)": 18.499881,
+    "Location (Longitude)": 73.859656,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST024",
+    "Name": "Mark Ortiz",
+    "Location (Latitude)": 18.589776,
+    "Location (Longitude)": 73.729677,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST025",
+    "Name": "Derrick Peters",
+    "Location (Latitude)": 18.505097,
+    "Location (Longitude)": 73.809012,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST026",
+    "Name": "Nicole Mccullough",
+    "Location (Latitude)": 18.563559,
+    "Location (Longitude)": 73.816842,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST027",
+    "Name": "Linda King",
+    "Location (Latitude)": 18.502392,
+    "Location (Longitude)": 73.863272,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST028",
+    "Name": "Jose Bradley",
+    "Location (Latitude)": 18.506129,
+    "Location (Longitude)": 73.866518,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST029",
+    "Name": "Samantha Wilkinson",
+    "Location (Latitude)": 18.462113,
+    "Location (Longitude)": 73.863647,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST030",
+    "Name": "Andrew Turner",
+    "Location (Latitude)": 18.576329,
+    "Location (Longitude)": 73.911528,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST031",
+    "Name": "Jerry Miller",
+    "Location (Latitude)": 18.540149,
+    "Location (Longitude)": 73.896507,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST032",
+    "Name": "David Hill",
+    "Location (Latitude)": 18.518809,
+    "Location (Longitude)": 73.941485,
+    "Preferred Store": "Magarpatta"
+  },
+  {
+    "Customer ID": "CUST033",
+    "Name": "Grace Hobbs",
+    "Location (Latitude)": 18.559286,
+    "Location (Longitude)": 73.778943,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST034",
+    "Name": "Gary Smith",
+    "Location (Latitude)": 18.497647,
+    "Location (Longitude)": 73.931319,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST035",
+    "Name": "Mrs. Natalie Watson",
+    "Location (Latitude)": 18.518353,
+    "Location (Longitude)": 73.843123,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST036",
+    "Name": "Laura Mcmahon",
+    "Location (Latitude)": 18.591971,
+    "Location (Longitude)": 73.732676,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST037",
+    "Name": "Katrina King",
+    "Location (Latitude)": 18.450716,
+    "Location (Longitude)": 73.867337,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST038",
+    "Name": "Mark Castro",
+    "Location (Latitude)": 18.629813,
+    "Location (Longitude)": 73.800364,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST039",
+    "Name": "Jasmine Crawford",
+    "Location (Latitude)": 18.522122,
+    "Location (Longitude)": 73.846079,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST040",
+    "Name": "Julie Martin",
+    "Location (Latitude)": 18.583785,
+    "Location (Longitude)": 73.740352,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST041",
+    "Name": "Mandy Santiago",
+    "Location (Latitude)": 18.508485,
+    "Location (Longitude)": 73.85888,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST042",
+    "Name": "David Smith",
+    "Location (Latitude)": 18.5669,
+    "Location (Longitude)": 73.805659,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST043",
+    "Name": "Kenneth Patel",
+    "Location (Latitude)": 18.619928,
+    "Location (Longitude)": 73.793068,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST044",
+    "Name": "Jennifer Howard",
+    "Location (Latitude)": 18.588032,
+    "Location (Longitude)": 73.776297,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST045",
+    "Name": "Veronica Scott",
+    "Location (Latitude)": 18.457899,
+    "Location (Longitude)": 73.87189,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST046",
+    "Name": "Kristina Davis",
+    "Location (Latitude)": 18.450813,
+    "Location (Longitude)": 73.866293,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST047",
+    "Name": "Gregg Ochoa",
+    "Location (Latitude)": 18.55816,
+    "Location (Longitude)": 73.77054,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST048",
+    "Name": "Edward White",
+    "Location (Latitude)": 18.506413,
+    "Location (Longitude)": 73.813987,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST049",
+    "Name": "Daniel Campbell",
+    "Location (Latitude)": 18.501419,
+    "Location (Longitude)": 73.930898,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST050",
+    "Name": "Mr. Jeremy Williams",
+    "Location (Latitude)": 18.553487,
+    "Location (Longitude)": 73.815745,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST051",
+    "Name": "Mary Wise",
+    "Location (Latitude)": 18.456215,
+    "Location (Longitude)": 73.877059,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST052",
+    "Name": "Tanya Matthews",
+    "Location (Latitude)": 18.514767,
+    "Location (Longitude)": 73.801023,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST053",
+    "Name": "Stephanie Martin",
+    "Location (Latitude)": 18.621514,
+    "Location (Longitude)": 73.792194,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST054",
+    "Name": "Tony Marquez",
+    "Location (Latitude)": 18.588443,
+    "Location (Longitude)": 73.740613,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST055",
+    "Name": "David Wood",
+    "Location (Latitude)": 18.597704,
+    "Location (Longitude)": 73.790111,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST056",
+    "Name": "Carol Rice",
+    "Location (Latitude)": 18.527421,
+    "Location (Longitude)": 73.898636,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST057",
+    "Name": "Emily Mills",
+    "Location (Latitude)": 18.539506,
+    "Location (Longitude)": 73.899384,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST058",
+    "Name": "Tonya Campos",
+    "Location (Latitude)": 18.559837,
+    "Location (Longitude)": 73.914747,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST059",
+    "Name": "Phyllis Hernandez",
+    "Location (Latitude)": 18.533713,
+    "Location (Longitude)": 73.894001,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST060",
+    "Name": "David Molina",
+    "Location (Latitude)": 18.525343,
+    "Location (Longitude)": 73.932065,
+    "Preferred Store": "Magarpatta"
+  },
+  {
+    "Customer ID": "CUST061",
+    "Name": "Alexander Johnson",
+    "Location (Latitude)": 18.514287,
+    "Location (Longitude)": 73.872731,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST062",
+    "Name": "Thomas Roberts",
+    "Location (Latitude)": 18.522189,
+    "Location (Longitude)": 73.882337,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST063",
+    "Name": "Jason Cole",
+    "Location (Latitude)": 18.505502,
+    "Location (Longitude)": 73.861069,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST064",
+    "Name": "Robin Johnson",
+    "Location (Latitude)": 18.577406,
+    "Location (Longitude)": 73.921762,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST065",
+    "Name": "Samuel Alvarez",
+    "Location (Latitude)": 18.497462,
+    "Location (Longitude)": 73.815111,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST066",
+    "Name": "Brooke Cooper",
+    "Location (Latitude)": 18.524904,
+    "Location (Longitude)": 73.849159,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST067",
+    "Name": "Jennifer Cummings",
+    "Location (Latitude)": 18.554714,
+    "Location (Longitude)": 73.769358,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST068",
+    "Name": "Jennifer Buchanan",
+    "Location (Latitude)": 18.509589,
+    "Location (Longitude)": 73.780685,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST069",
+    "Name": "Isabella Reyes",
+    "Location (Latitude)": 18.595669,
+    "Location (Longitude)": 73.758067,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST070",
+    "Name": "Jessica Howard",
+    "Location (Latitude)": 18.598298,
+    "Location (Longitude)": 73.788105,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST071",
+    "Name": "Abigail Mccoy",
+    "Location (Latitude)": 18.545924,
+    "Location (Longitude)": 73.902751,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST072",
+    "Name": "Mary Cantu",
+    "Location (Latitude)": 18.502533,
+    "Location (Longitude)": 73.873204,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST073",
+    "Name": "Virginia Leon",
+    "Location (Latitude)": 18.577292,
+    "Location (Longitude)": 73.919016,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST074",
+    "Name": "John Barry",
+    "Location (Latitude)": 18.525171,
+    "Location (Longitude)": 73.846891,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST075",
+    "Name": "Jamie Lambert",
+    "Location (Latitude)": 18.588567,
+    "Location (Longitude)": 73.747682,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST076",
+    "Name": "Kathryn Garza",
+    "Location (Latitude)": 18.607737,
+    "Location (Longitude)": 73.792042,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST077",
+    "Name": "Mary Sharp",
+    "Location (Latitude)": 18.512086,
+    "Location (Longitude)": 73.803577,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST078",
+    "Name": "Jimmy Henry",
+    "Location (Latitude)": 18.562539,
+    "Location (Longitude)": 73.815097,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST079",
+    "Name": "Monica Green",
+    "Location (Latitude)": 18.504635,
+    "Location (Longitude)": 73.776659,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST080",
+    "Name": "Stephen Bailey",
+    "Location (Latitude)": 18.587627,
+    "Location (Longitude)": 73.742361,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST081",
+    "Name": "Matthew Miller",
+    "Location (Latitude)": 18.523861,
+    "Location (Longitude)": 73.846126,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST082",
+    "Name": "Sean Price",
+    "Location (Latitude)": 18.507043,
+    "Location (Longitude)": 73.808513,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST083",
+    "Name": "William Walters",
+    "Location (Latitude)": 18.592533,
+    "Location (Longitude)": 73.760765,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST084",
+    "Name": "Mindy Kane",
+    "Location (Latitude)": 18.583709,
+    "Location (Longitude)": 73.748767,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST085",
+    "Name": "Kenneth Bailey",
+    "Location (Latitude)": 18.529405,
+    "Location (Longitude)": 73.902179,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST086",
+    "Name": "Dawn Brown",
+    "Location (Latitude)": 18.525726,
+    "Location (Longitude)": 73.835808,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST087",
+    "Name": "Julie Martin",
+    "Location (Latitude)": 18.520019,
+    "Location (Longitude)": 73.94163,
+    "Preferred Store": "Magarpatta"
+  },
+  {
+    "Customer ID": "CUST088",
+    "Name": "Corey Villegas",
+    "Location (Latitude)": 18.51071,
+    "Location (Longitude)": 73.816155,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST089",
+    "Name": "Nicole Roman",
+    "Location (Latitude)": 18.589809,
+    "Location (Longitude)": 73.788736,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST090",
+    "Name": "Emily Smith",
+    "Location (Latitude)": 18.606936,
+    "Location (Longitude)": 73.761027,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST091",
+    "Name": "Gabriel Sanford",
+    "Location (Latitude)": 18.59448,
+    "Location (Longitude)": 73.73644,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST092",
+    "Name": "Shawn Hodge",
+    "Location (Latitude)": 18.523478,
+    "Location (Longitude)": 73.847102,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST093",
+    "Name": "Rose Randolph",
+    "Location (Latitude)": 18.463569,
+    "Location (Longitude)": 73.863271,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST094",
+    "Name": "William Walker",
+    "Location (Latitude)": 18.50322,
+    "Location (Longitude)": 73.799928,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST095",
+    "Name": "Micheal Zimmerman",
+    "Location (Latitude)": 18.517012,
+    "Location (Longitude)": 73.884744,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST096",
+    "Name": "Dillon Stout",
+    "Location (Latitude)": 18.508857,
+    "Location (Longitude)": 73.800248,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST097",
+    "Name": "Robert Williams",
+    "Location (Latitude)": 18.521281,
+    "Location (Longitude)": 73.877538,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST098",
+    "Name": "Kelly White",
+    "Location (Latitude)": 18.532416,
+    "Location (Longitude)": 73.895401,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST099",
+    "Name": "Kaitlyn Huff",
+    "Location (Latitude)": 18.565242,
+    "Location (Longitude)": 73.817297,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST100",
+    "Name": "William Andrade",
+    "Location (Latitude)": 18.517626,
+    "Location (Longitude)": 73.88195,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST101",
+    "Name": "Tina Robinson",
+    "Location (Latitude)": 18.564595,
+    "Location (Longitude)": 73.778932,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST102",
+    "Name": "Thomas Thomas",
+    "Location (Latitude)": 18.590432,
+    "Location (Longitude)": 73.745884,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST103",
+    "Name": "Ryan Garcia",
+    "Location (Latitude)": 18.526819,
+    "Location (Longitude)": 73.853523,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST104",
+    "Name": "Brian Brown",
+    "Location (Latitude)": 18.636544,
+    "Location (Longitude)": 73.799697,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST105",
+    "Name": "Ricardo Trujillo",
+    "Location (Latitude)": 18.523449,
+    "Location (Longitude)": 73.842868,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST106",
+    "Name": "William Johnson",
+    "Location (Latitude)": 18.569878,
+    "Location (Longitude)": 73.910478,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST107",
+    "Name": "Brandon Shah",
+    "Location (Latitude)": 18.502869,
+    "Location (Longitude)": 73.814653,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST108",
+    "Name": "Michael Turner",
+    "Location (Latitude)": 18.600622,
+    "Location (Longitude)": 73.779214,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST109",
+    "Name": "Shawn Avery",
+    "Location (Latitude)": 18.633883,
+    "Location (Longitude)": 73.797234,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST110",
+    "Name": "Jason Reeves",
+    "Location (Latitude)": 18.505254,
+    "Location (Longitude)": 73.880335,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST111",
+    "Name": "Brian Rodriguez",
+    "Location (Latitude)": 18.602308,
+    "Location (Longitude)": 73.746751,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST112",
+    "Name": "Jamie Middleton",
+    "Location (Latitude)": 18.514536,
+    "Location (Longitude)": 73.930448,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST113",
+    "Name": "Cameron Turner II",
+    "Location (Latitude)": 18.639488,
+    "Location (Longitude)": 73.802885,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST114",
+    "Name": "John Graham",
+    "Location (Latitude)": 18.517221,
+    "Location (Longitude)": 73.926859,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST115",
+    "Name": "Edward Kennedy",
+    "Location (Latitude)": 18.510649,
+    "Location (Longitude)": 73.875468,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST116",
+    "Name": "Makayla Carter",
+    "Location (Latitude)": 18.507354,
+    "Location (Longitude)": 73.861321,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST117",
+    "Name": "James Robbins",
+    "Location (Latitude)": 18.518535,
+    "Location (Longitude)": 73.772347,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST118",
+    "Name": "Jeremiah Fuller",
+    "Location (Latitude)": 18.562322,
+    "Location (Longitude)": 73.80866,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST119",
+    "Name": "Cory Dunn",
+    "Location (Latitude)": 18.500018,
+    "Location (Longitude)": 73.812745,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST120",
+    "Name": "Diane Hicks",
+    "Location (Latitude)": 18.574896,
+    "Location (Longitude)": 73.918492,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST121",
+    "Name": "Linda Harrison",
+    "Location (Latitude)": 18.533593,
+    "Location (Longitude)": 73.848743,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST122",
+    "Name": "Alan Perez",
+    "Location (Latitude)": 18.534419,
+    "Location (Longitude)": 73.843022,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST123",
+    "Name": "Tyler Woodward",
+    "Location (Latitude)": 18.558395,
+    "Location (Longitude)": 73.782987,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST124",
+    "Name": "Debra Mccarthy",
+    "Location (Latitude)": 18.563006,
+    "Location (Longitude)": 73.797883,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST125",
+    "Name": "Felicia Moore",
+    "Location (Latitude)": 18.510966,
+    "Location (Longitude)": 73.81747,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST126",
+    "Name": "Frank Hart",
+    "Location (Latitude)": 18.561731,
+    "Location (Longitude)": 73.786554,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST127",
+    "Name": "Sandy Robinson",
+    "Location (Latitude)": 18.51592,
+    "Location (Longitude)": 73.917821,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST128",
+    "Name": "Alexa Martinez",
+    "Location (Latitude)": 18.591593,
+    "Location (Longitude)": 73.775949,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST129",
+    "Name": "Patrick Bridges",
+    "Location (Latitude)": 18.517002,
+    "Location (Longitude)": 73.778568,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST130",
+    "Name": "Matthew Patterson",
+    "Location (Latitude)": 18.566739,
+    "Location (Longitude)": 73.77498,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST131",
+    "Name": "Casey Ward",
+    "Location (Latitude)": 18.560276,
+    "Location (Longitude)": 73.912233,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST132",
+    "Name": "Lisa Liu",
+    "Location (Latitude)": 18.63356,
+    "Location (Longitude)": 73.808791,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST133",
+    "Name": "Keith Anderson",
+    "Location (Latitude)": 18.525917,
+    "Location (Longitude)": 73.851223,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST134",
+    "Name": "Alicia Sims",
+    "Location (Latitude)": 18.597155,
+    "Location (Longitude)": 73.746198,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST135",
+    "Name": "Amanda Noble",
+    "Location (Latitude)": 18.515904,
+    "Location (Longitude)": 73.844464,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST136",
+    "Name": "Dennis Banks",
+    "Location (Latitude)": 18.492432,
+    "Location (Longitude)": 73.855833,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST137",
+    "Name": "Dr. Kylie Harris",
+    "Location (Latitude)": 18.507184,
+    "Location (Longitude)": 73.811076,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST138",
+    "Name": "Patricia Shaffer",
+    "Location (Latitude)": 18.508499,
+    "Location (Longitude)": 73.778437,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST139",
+    "Name": "Scott Bautista",
+    "Location (Latitude)": 18.593474,
+    "Location (Longitude)": 73.789807,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST140",
+    "Name": "Bianca Bradley",
+    "Location (Latitude)": 18.505079,
+    "Location (Longitude)": 73.935899,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST141",
+    "Name": "Collin Fuller",
+    "Location (Latitude)": 18.453367,
+    "Location (Longitude)": 73.861305,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST142",
+    "Name": "Brittany Jimenez",
+    "Location (Latitude)": 18.50347,
+    "Location (Longitude)": 73.884178,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST143",
+    "Name": "Lisa Harris",
+    "Location (Latitude)": 18.505507,
+    "Location (Longitude)": 73.929915,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST144",
+    "Name": "Justin Young",
+    "Location (Latitude)": 18.521521,
+    "Location (Longitude)": 73.842128,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST145",
+    "Name": "Christopher Rice",
+    "Location (Latitude)": 18.513771,
+    "Location (Longitude)": 73.777078,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST146",
+    "Name": "Andrew Obrien",
+    "Location (Latitude)": 18.51247,
+    "Location (Longitude)": 73.801849,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST147",
+    "Name": "Kelly Barnes",
+    "Location (Latitude)": 18.501013,
+    "Location (Longitude)": 73.809682,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST148",
+    "Name": "Austin Garcia",
+    "Location (Latitude)": 18.497506,
+    "Location (Longitude)": 73.924845,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST149",
+    "Name": "James Morgan",
+    "Location (Latitude)": 18.504661,
+    "Location (Longitude)": 73.868576,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST150",
+    "Name": "Chelsea Berry",
+    "Location (Latitude)": 18.561353,
+    "Location (Longitude)": 73.799456,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST151",
+    "Name": "Matthew Wu",
+    "Location (Latitude)": 18.523729,
+    "Location (Longitude)": 73.9233,
+    "Preferred Store": "Magarpatta"
+  },
+  {
+    "Customer ID": "CUST152",
+    "Name": "Charles Shields",
+    "Location (Latitude)": 18.507523,
+    "Location (Longitude)": 73.804971,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST153",
+    "Name": "Ebony Nguyen",
+    "Location (Latitude)": 18.505861,
+    "Location (Longitude)": 73.934805,
+    "Preferred Store": "Hadapsar"
+  },
+  {
+    "Customer ID": "CUST154",
+    "Name": "Steven Lambert",
+    "Location (Latitude)": 18.531167,
+    "Location (Longitude)": 73.884523,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST155",
+    "Name": "Brenda Kelley",
+    "Location (Latitude)": 18.522092,
+    "Location (Longitude)": 73.772568,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST156",
+    "Name": "Christina Jones",
+    "Location (Latitude)": 18.523297,
+    "Location (Longitude)": 73.847009,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST157",
+    "Name": "Charles Yu",
+    "Location (Latitude)": 18.512653,
+    "Location (Longitude)": 73.88572,
+    "Preferred Store": "Camp"
+  },
+  {
+    "Customer ID": "CUST158",
+    "Name": "Leslie Waters",
+    "Location (Latitude)": 18.504323,
+    "Location (Longitude)": 73.863712,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST159",
+    "Name": "Vincent Walker",
+    "Location (Latitude)": 18.510652,
+    "Location (Longitude)": 73.798595,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST160",
+    "Name": "Nathan Mills",
+    "Location (Latitude)": 18.561661,
+    "Location (Longitude)": 73.910294,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST161",
+    "Name": "Ryan Gonzalez",
+    "Location (Latitude)": 18.567448,
+    "Location (Longitude)": 73.809743,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST162",
+    "Name": "Jessica Thomas",
+    "Location (Latitude)": 18.560136,
+    "Location (Longitude)": 73.803248,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST163",
+    "Name": "Jeffrey Johnson",
+    "Location (Latitude)": 18.448887,
+    "Location (Longitude)": 73.863899,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST164",
+    "Name": "Christopher Byrd",
+    "Location (Latitude)": 18.523395,
+    "Location (Longitude)": 73.834666,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST165",
+    "Name": "Daniel Reed",
+    "Location (Latitude)": 18.522165,
+    "Location (Longitude)": 73.842284,
+    "Preferred Store": "Shivaji Nagar"
+  },
+  {
+    "Customer ID": "CUST166",
+    "Name": "Matthew Perez",
+    "Location (Latitude)": 18.466204,
+    "Location (Longitude)": 73.861665,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST167",
+    "Name": "David Young",
+    "Location (Latitude)": 18.549711,
+    "Location (Longitude)": 73.812353,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST168",
+    "Name": "Marcus Hubbard",
+    "Location (Latitude)": 18.562589,
+    "Location (Longitude)": 73.808973,
+    "Preferred Store": "Aundh"
+  },
+  {
+    "Customer ID": "CUST169",
+    "Name": "Jason Wong",
+    "Location (Latitude)": 18.516099,
+    "Location (Longitude)": 73.775094,
+    "Preferred Store": "Bavdhan"
+  },
+  {
+    "Customer ID": "CUST170",
+    "Name": "Jordan Clarke",
+    "Location (Latitude)": 18.560527,
+    "Location (Longitude)": 73.782656,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST171",
+    "Name": "Maria Fitzgerald",
+    "Location (Latitude)": 18.510918,
+    "Location (Longitude)": 73.843472,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST172",
+    "Name": "Jordan Warren",
+    "Location (Latitude)": 18.587003,
+    "Location (Longitude)": 73.739529,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST173",
+    "Name": "Jonathan Pittman",
+    "Location (Latitude)": 18.448719,
+    "Location (Longitude)": 73.871604,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST174",
+    "Name": "Theresa Harris",
+    "Location (Latitude)": 18.510385,
+    "Location (Longitude)": 73.869061,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST175",
+    "Name": "Beth Morales",
+    "Location (Latitude)": 18.571577,
+    "Location (Longitude)": 73.771415,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST176",
+    "Name": "Wendy Savage",
+    "Location (Latitude)": 18.528159,
+    "Location (Longitude)": 73.90319,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST177",
+    "Name": "Ryan Willis",
+    "Location (Latitude)": 18.595873,
+    "Location (Longitude)": 73.7478,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST178",
+    "Name": "Charles Marshall",
+    "Location (Latitude)": 18.500915,
+    "Location (Longitude)": 73.812267,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST179",
+    "Name": "John Kerr",
+    "Location (Latitude)": 18.631577,
+    "Location (Longitude)": 73.805836,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST180",
+    "Name": "Melissa Gonzalez",
+    "Location (Latitude)": 18.507979,
+    "Location (Longitude)": 73.811709,
+    "Preferred Store": "Kothrud"
+  },
+  {
+    "Customer ID": "CUST181",
+    "Name": "Brandon Mccall",
+    "Location (Latitude)": 18.630831,
+    "Location (Longitude)": 73.801849,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST182",
+    "Name": "Susan Kennedy",
+    "Location (Latitude)": 18.561315,
+    "Location (Longitude)": 73.92323,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST183",
+    "Name": "Bridget Rush",
+    "Location (Latitude)": 18.514013,
+    "Location (Longitude)": 73.847522,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST184",
+    "Name": "Elizabeth Hill",
+    "Location (Latitude)": 18.519937,
+    "Location (Longitude)": 73.833951,
+    "Preferred Store": "FC Road"
+  },
+  {
+    "Customer ID": "CUST185",
+    "Name": "Anthony Sanders",
+    "Location (Latitude)": 18.539933,
+    "Location (Longitude)": 73.897864,
+    "Preferred Store": "Koregaon Park"
+  },
+  {
+    "Customer ID": "CUST186",
+    "Name": "Emily English",
+    "Location (Latitude)": 18.557053,
+    "Location (Longitude)": 73.778251,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST187",
+    "Name": "Deborah Sullivan",
+    "Location (Latitude)": 18.507757,
+    "Location (Longitude)": 73.937108,
+    "Preferred Store": "Magarpatta"
+  },
+  {
+    "Customer ID": "CUST188",
+    "Name": "Dawn Ramirez",
+    "Location (Latitude)": 18.50635,
+    "Location (Longitude)": 73.858482,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST189",
+    "Name": "Erica Clark",
+    "Location (Latitude)": 18.461536,
+    "Location (Longitude)": 73.862462,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST190",
+    "Name": "Beverly Price",
+    "Location (Latitude)": 18.508169,
+    "Location (Longitude)": 73.863545,
+    "Preferred Store": "Swargate"
+  },
+  {
+    "Customer ID": "CUST191",
+    "Name": "Cristian Harris",
+    "Location (Latitude)": 18.525752,
+    "Location (Longitude)": 73.933012,
+    "Preferred Store": "Magarpatta"
+  },
+  {
+    "Customer ID": "CUST192",
+    "Name": "Natalie Moore",
+    "Location (Latitude)": 18.594404,
+    "Location (Longitude)": 73.762858,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST193",
+    "Name": "Ashley Harris",
+    "Location (Latitude)": 18.62793,
+    "Location (Longitude)": 73.795955,
+    "Preferred Store": "Pimpri"
+  },
+  {
+    "Customer ID": "CUST194",
+    "Name": "Danielle Sherman",
+    "Location (Latitude)": 18.594294,
+    "Location (Longitude)": 73.730434,
+    "Preferred Store": "Hinjewadi"
+  },
+  {
+    "Customer ID": "CUST195",
+    "Name": "Brenda Brock",
+    "Location (Latitude)": 18.607197,
+    "Location (Longitude)": 73.749002,
+    "Preferred Store": "Wakad"
+  },
+  {
+    "Customer ID": "CUST196",
+    "Name": "Paul Robinson",
+    "Location (Latitude)": 18.559592,
+    "Location (Longitude)": 73.910017,
+    "Preferred Store": "Viman Nagar"
+  },
+  {
+    "Customer ID": "CUST197",
+    "Name": "John Scott",
+    "Location (Latitude)": 18.604167,
+    "Location (Longitude)": 73.775114,
+    "Preferred Store": "Pimple Saudagar"
+  },
+  {
+    "Customer ID": "CUST198",
+    "Name": "Eric Mack",
+    "Location (Latitude)": 18.460941,
+    "Location (Longitude)": 73.877449,
+    "Preferred Store": "Katraj"
+  },
+  {
+    "Customer ID": "CUST199",
+    "Name": "Jennifer Weeks",
+    "Location (Latitude)": 18.563793,
+    "Location (Longitude)": 73.7772,
+    "Preferred Store": "Baner"
+  },
+  {
+    "Customer ID": "CUST200",
+    "Name": "Jenny Robinson",
+    "Location (Latitude)": 18.505509,
+    "Location (Longitude)": 73.810026,
+    "Preferred Store": "Kothrud"
   }
 ]
