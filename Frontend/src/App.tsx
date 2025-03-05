@@ -1,17 +1,28 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 // Layouts
 import { AuthLayout } from "@/layouts/AuthLayout";
-import { DashboardLayout } from "@/layouts/DashboardLayout";
 
 // Pages
 import { Login } from "@/pages/Login";
 import { Register } from "@/pages/Register";
-import { Dashboard } from "@/pages/Dashboard";
 import { NotFound } from "@/pages/NotFound";
+
+import Layout from '@/components/layout';
+import LandingPage from '@/pages/landing';
+import HeatmapAnalytics from '@/pages/heatmap-analytics';
+import CompetitorAnalysis from '@/pages/competitor-analysis';
+import LocationExplorer from '@/pages/location-explorer';
+import AIInsightsHub from '@/pages/ai-insights';
+import DataManagement from '@/pages/data-management';
+import ReportsAnalytics from '@/pages/reports';
+import Settings from '@/pages/settings';
+import Documentation from '@/pages/documentation';
+import Support from '@/pages/support';
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -26,16 +37,21 @@ function App() {
             </Route>
 
             {/* Dashboard Routes */}
-            <Route path="/dashboard" element={<DashboardLayout />}>
-              <Route index element={<Dashboard />} />
-              <Route path="analytics" element={<div>Analytics Page</div>} />
-              <Route path="users" element={<div>Users Page</div>} />
-              <Route path="settings" element={<div>Settings Page</div>} />
-              <Route path="profile" element={<div>Profile Page</div>} />
+            <Route path="/" element={<LandingPage />} />
+          <Route element={<Layout />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/heatmap" element={<HeatmapAnalytics />} />
+            <Route path="/competitors" element={<CompetitorAnalysis />} />
+            <Route path="/locations" element={<LocationExplorer />} />
+            <Route path="/ai-insights" element={<AIInsightsHub />} />
+            <Route path="/data" element={<DataManagement />} />
+            <Route path="/reports" element={<ReportsAnalytics />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/docs" element={<Documentation />} />
+            <Route path="/support" element={<Support />} />
             </Route>
 
             {/* Redirect root to login */}
-            <Route path="/" element={<Navigate to="/login" replace />} />
             
             {/* 404 Route */}
             <Route path="*" element={<NotFound />} />
