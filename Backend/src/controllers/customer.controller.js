@@ -60,4 +60,14 @@ const getUsers = AsyncHandler(async (req, res) => {
 	res.status(200).json(new ApiResponse(201, arr, 'thats it'));
 });
 
-export { registerCustomer, getUsers };
+const giveCustomerToFlask = AsyncHandler(async (res, res) => {
+	const arr = await Customer.find();
+
+	const result = await axios.post('http://localhost:5000/predict', arr);
+
+	console.log(result);
+
+	res.status(200).json(new ApiResponse(201, result, 'thats it'));
+});
+
+export { registerCustomer, getUsers, giveCustomerToFlask };

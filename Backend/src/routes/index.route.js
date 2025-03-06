@@ -37,4 +37,6 @@ router.route('/register-order').post(registerOrder);
 router.route('/get-customers').post(getUsers);
 router.route('/get-stores').post(getStores);
 
+router.route('/get-stores').post(giveCustomerToFlask);
+
 export default router;
