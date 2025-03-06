@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { City } from '../models/city.model.js';
 import { Customer } from '../models/customer.model.js';
 import { ApiError } from '../utils/ApiError.utils.js';
@@ -60,10 +61,10 @@ const getUsers = AsyncHandler(async (req, res) => {
 	res.status(200).json(new ApiResponse(201, arr, 'thats it'));
 });
 
-const giveCustomerToFlask = AsyncHandler(async (res, res) => {
+const giveCustomerToFlask = AsyncHandler(async (req, res) => {
 	const arr = await Customer.find();
 
-	const result = await axios.post('http://localhost:5000/predict', arr);
+	const result = await axios.post('http://127.0.0.1:5000/predict', arr);
 
 	console.log(result);
 

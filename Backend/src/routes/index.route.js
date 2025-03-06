@@ -6,6 +6,7 @@ import { registerCity } from '../controllers/city.controller.js';
 import { getStores, registerStore } from '../controllers/stores.controller.js';
 import {
 	getUsers,
+	giveCustomerToFlask,
 	registerCustomer,
 } from '../controllers/customer.controller.js';
 import { registerOrder } from '../controllers/order.controller.js';
@@ -37,6 +38,6 @@ router.route('/register-order').post(registerOrder);
 router.route('/get-customers').post(getUsers);
 router.route('/get-stores').post(getStores);
 
-router.route('/get-stores').post(giveCustomerToFlask);
+router.route('/get-predicted-stores').post(giveCustomerToFlask);
 
 export default router;
