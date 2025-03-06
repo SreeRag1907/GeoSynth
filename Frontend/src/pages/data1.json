@@ -44,15 +44,7 @@
     "Average Delivery Time (minutes)": 44,
     "Active Delivery Partners": 25
   },
-  {
-    "Store Name": "Wakad",
-    "Latitude": 18.5983,
-    "Longitude": 73.7557,
-    "Orders per Day": 242,
-    "Orders Delayed per Day": 29,
-    "Average Delivery Time (minutes)": 22,
-    "Active Delivery Partners": 26
-  },
+
   {
     "Store Name": "Magarpatta",
     "Latitude": 18.5167,
