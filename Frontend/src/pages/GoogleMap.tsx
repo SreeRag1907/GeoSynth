@@ -1,170 +1,181 @@
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import axios from 'axios';
+import locationData from '../pages/data.json'; // Corrected path to locationData
+import storeData from './data1.json'; // Store data
 
-const GOOGLE_API_KEY = 'AIzaSyAI_O0v5aCYbOeTriXuQjxgglTcQZNce8w'; // Replace with your Google Maps API key
-
-declare global {
-  interface Window {
-    initMap: () => void;
-  }
-}
-
-interface Customer {
-  location: {
-    coordinates: [number, number];
-  };
-  name: string;
-  orders: any[];
-  email: string;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-  _id: string;
-}
-
-interface Store {
-  Latitude: number;
-  Longitude: number;
-  'Store Name': string;
-}
+const GOOGLE_API_KEY = 'AIzaSyAI_O0v5aCYbOeTriXuQjxgglTcQZNce8w'; // **REPLACE WITH YOUR ACTUAL API KEY**
 
 export default function GoogleMap({ opacity }: { opacity: number }) {
-  const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstance = useRef<google.maps.Map | null>(null);
-  const heatmapLayer = useRef<google.maps.visualization.HeatmapLayer | null>(null);
-  const [customers, setCustomers] = useState<Customer[]>([]);
-  const [predictedStoreLocations, setPredictedStoreLocations] = useState<google.maps.LatLng[]>([]);
-  const [storeData, setStoreData] = useState<Store[]>([]);
+    const mapRef = useRef<HTMLDivElement>(null);
+    const mapInstance = useRef<google.maps.Map | null>(null);
+    const heatmapLayer = useRef<google.maps.visualization.HeatmapLayer | null>(null);
+    const [predictedStoreLocations, setPredictedStoreLocations] = useState<google.maps.LatLng[]>([]);
 
-  useEffect(() => {
-    const fetchCustomers = async () => {
-      try {
-        const response = await axios.post('http://localhost:8000/api/get-customers');
-        const res: Customer[] = response.data.data; // Access the data property of the response
-        setCustomers(res);
-        console.log(res);
-        initMap(res);
-      } catch (error) {
-        console.error('Error fetching customers:', error);
-      }
-    };
+    useEffect(() => {
+        const heatmapData = locationData.map((item) => ({
+            lat: item["Location (Latitude)"],
+            lng: item["Location (Longitude)"],
+        }));
 
-    const fetchPredictedLocations = async () => {
-      try {
-        const response = await axios.get('http://127.0.0.1:5000/api/predict_stores');
-        const responseData = response.data;
-        const predictedStoresArray = responseData.predicted_stores;
-        const predictedLatLng = predictedStoresArray.map(loc => new google.maps.LatLng(loc.latitude, loc.longitude));
-        setPredictedStoreLocations(predictedLatLng);
-      } catch (error) {
-        console.error("Error fetching predicted store locations:", error);
-        setPredictedStoreLocations([]);
-      }
-    };
+        const fetchPredictedLocations = async () => { // Function to fetch data from API
+            try {
+                const response = await fetch('http://127.0.0.1:5000/api/predict_stores'); // API endpoint URL
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const responseData = await response.json(); // Get the JSON response object
+                console.log("Parsed JSON data:", responseData); // Log the entire response
 
-    const fetchStoreData = async () => {
-      try {
-        const response = await axios.post('http://localhost:8000/api/get-stores');
-        const res: Store[] = response.data.data; // Access the data property of the response
-        setStoreData(res);
-        console.log(res);
-      } catch (error) {
-        console.error('Error fetching store data:', error);
-      }
-    };
+                // **Correctly access the predicted_stores array from the response object**
+                const predictedStoresArray = responseData.predicted_stores;
+                console.log("Predicted stores array:", predictedStoresArray); // Log the array
 
-    const initMap = (res: Customer[]) => {
-      if (mapRef.current && !mapInstance.current) {
-        mapInstance.current = new google.maps.Map(mapRef.current, {
-          zoom: 12,
-          center: { lat: 18.5204, lng: 73.8567 }, // Default center (Pune)
-          mapTypeId: 'roadmap',
-        });
+                // **Now map over the predictedStoresArray (the array, not the whole object)**
+                const predictedLatLng = predictedStoresArray.map(loc => new google.maps.LatLng(loc.latitude, loc.longitude));
+                setPredictedStoreLocations(predictedLatLng);
 
-        heatmapLayer.current = new google.maps.visualization.HeatmapLayer({
-          data: res.map((point) => new google.maps.LatLng(point.location.coordinates[1], point.location.coordinates[0])),
-          opacity: 0.6, // Adjusted opacity for more prominent red marks
-          radius: 50, // Increased radius for larger heatmap points
-          dissipating: true,
-        });
+            } catch (error) {
+                console.error("Error fetching predicted store locations:", error);
+                setPredictedStoreLocations([]);
+            }
+        };
 
-        heatmapLayer.current.setMap(mapInstance.current);
 
-        predictedStoreLocations.forEach(location => {
-          new google.maps.Marker({
-            position: location,
-            map: mapInstance.current,
-            title: 'Predicted Store Location',
-            icon: {
-              url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
-              scaledSize: new google.maps.Size(32, 32),
-            },
-          });
-        });
+        const initMap = () => {
+            if (mapRef.current && !mapInstance.current) {
+                mapInstance.current = new google.maps.Map(mapRef.current, {
+                    zoom: 12,
+                    center: { lat: 18.5204, lng: 73.8567 }, // Default center (Pune)
+                    mapTypeId: 'roadmap',
+                });
 
-        storeData.forEach((item) => {
-          new google.maps.Marker({
-            position: { lat: item.Latitude, lng: item.Longitude },
-            map: mapInstance.current,
-            title: item['Store Name'],
-            icon: {
-              url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', // Green marker for stores
-              scaledSize: new google.maps.Size(32, 32),
-            },
-          });
+                heatmapLayer.current = new google.maps.visualization.HeatmapLayer({
+                    data: heatmapData.map((point) => new google.maps.LatLng(point.lat, point.lng)),
+                    opacity,
+                    radius: 30,
+                    dissipating: true,
+                });
 
-          new google.maps.Circle({
-            map: mapInstance.current,
-            center: { lat: item.Latitude, lng: item.Longitude },
-            radius: 1000, // 1 km radius
-            strokeColor: '#0000FF',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#0000FF',
-            fillOpacity: 0.1,
-          });
-        });
-      }
-    };
+                heatmapLayer.current.setMap(mapInstance.current);
 
-    if (!window.google) {
-      window.initMap = () => {
-        fetchCustomers();
-        fetchPredictedLocations();
-        fetchStoreData();
-      };
-      const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=visualization&callback=initMap`;
-      script.async = true;
-      document.head.appendChild(script);
-    } else {
-      fetchCustomers();
-      fetchPredictedLocations();
-      fetchStoreData();
-    }
+                storeData.forEach((item) => {
+                    const marker = new google.maps.Marker({
+                        position: { lat: item.Latitude, lng: item.Longitude },
+                        map: mapInstance.current,
+                        title: item['Store Name'],
+                        icon: {
+                            url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', // URL to the location icon
+                            scaledSize: new google.maps.Size(32, 32),
+                        },
+                    });
 
-    return () => {
-      if (heatmapLayer.current) {
-        heatmapLayer.current.setMap(null);
-      }
-      mapInstance.current = null;
-    };
-  }, [opacity]);
+                    const circle = new google.maps.Circle({
+                        map: mapInstance.current,
+                        center: { lat: item.Latitude, lng: item.Longitude },
+                        radius: 1000, // 1 km radius
+                        strokeColor: '#0000FF',
+                        strokeOpacity: 0.8,
+                        strokeWeight: 2,
+                        fillColor: '#0000FF',
+                        fillOpacity: 0.1,
+                    });
 
-  return (
-    <div className="space-y-8">
-      <Card>
-        <CardHeader>
-          <CardTitle>Google Maps Heatmap</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div
-            ref={mapRef}
-            className="h-[600px] rounded-lg border-2 border-dashed"
-          ></div>
-        </CardContent>
-      </Card>
-    </div>
-  );
+                    const infoWindow = new google.maps.InfoWindow({
+                        content: `<div style="color: black;">
+                                            <h3>${item['Store Name']}</h3>
+                                            <p>Orders per Day: ${item['Orders per Day']}</p>
+                                            <p>Orders Delayed per Day: ${item['Orders Delayed per Day']}</p>
+                                            <p>Average Delivery Time: ${item['Average Delivery Time (minutes)']} minutes</p>
+                                            <p>Active Delivery Partners: ${item['Active Delivery Partners']}</p>
+                                        </div>
+                                        <style>
+                                            .gm-style-iw-c {
+                                                display: none;
+                                            }
+                                        </style>`
+                    });
+
+                    marker.addListener('mouseover', () => {
+                        infoWindow.open({
+                            anchor: marker,
+                            map: mapInstance.current,
+                        });
+                    });
+
+                    marker.addListener('mouseout', () => {
+                        infoWindow.close();
+                    });
+                });
+
+                //  Display Predicted Store Locations from State (API Data)
+                predictedStoreLocations.forEach(location => { // Now using predictedStoreLocations from state
+                    new google.maps.Marker({
+                        position: location,
+                        map: mapInstance.current,
+                        title: 'Predicted Store Location',
+                        icon: {
+                            url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png', // Different icon for predicted locations
+                            scaledSize: new google.maps.Size(32, 32),
+                        },
+                    });
+                });
+            }
+        };
+
+        if (!window.google) {
+            (window as any).initMap = initMap;
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=visualization&callback=initMap`;
+            script.async = true;
+            document.head.appendChild(script);
+        } else {
+            initMap();
+        }
+
+        fetchPredictedLocations(); // Call fetchPredictedLocations when component mounts (or opacity changes)
+
+        return () => {
+            if (heatmapLayer.current) {
+                heatmapLayer.current.setMap(null);
+            }
+            mapInstance.current = null;
+        };
+    }, [opacity]); // opacity dependency remains
+
+    useEffect(() => { // Separate useEffect to handle predictedStoreLocations state changes and marker updates
+        if (mapInstance.current && predictedStoreLocations.length > 0) {
+            // Clear existing predicted location markers (if needed, based on your desired behavior)
+            // ... (Code to clear existing markers if you want to re-render markers every time locations update) ...
+
+            // Display Predicted Store Locations from State (API Data) - Moved here
+            predictedStoreLocations.forEach(location => {
+                new google.maps.Marker({
+                    position: location,
+                    map: mapInstance.current,
+                    title: 'Predicted Store Location',
+                    icon: {
+                        url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+                        scaledSize: new google.maps.Size(32, 32),
+                    },
+                });
+            });
+        }
+    }, [predictedStoreLocations, mapInstance.current]); // React to changes in predictedStoreLocations and mapInstance
+
+
+    return (
+        <div className="space-y-8">
+            <Card>
+                <CardHeader>
+                    <CardTitle>Google Maps Heatmap with Store and Predicted Locations</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <div
+                        ref={mapRef}
+                        className="h-[600px] rounded-lg border-2 border-dashed"
+                    ></div>
+                </CardContent>
+            </Card>
+        </div>
+    );
 }
