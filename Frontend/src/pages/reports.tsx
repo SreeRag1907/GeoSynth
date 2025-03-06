@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,PieChart, Pie, Cell } from 'recharts';
 
 const performanceData = [
   { name: 'Jan', orders: 400, revenue: 2400 },
@@ -72,7 +72,7 @@ export default function ReportsAnalytics() {
                   fill="#8884d8"
                   dataKey="value"
                 >
-                  {marketData.map((entry, index) => (
+                  {marketData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
