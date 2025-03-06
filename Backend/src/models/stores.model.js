@@ -8,7 +8,6 @@ const storeSchema = new Schema(
 		storeNo: {
 			type: Number,
 			required: true,
-			unique: true,
 		},
 		name: {
 			type: String,
@@ -29,6 +28,20 @@ const storeSchema = new Schema(
 			type: Number,
 			required: true,
 		},
+		totalOrders: {
+			type: Number,
+			default: 0,
+		},
+		revenue: {
+			type: Number,
+			default: 0,
+		},
+		orders: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: 'Order',
+			},
+		],
 	},
 	{ timestamps: true }
 );

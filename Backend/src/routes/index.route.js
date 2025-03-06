@@ -4,6 +4,11 @@ import axios from 'axios';
 import { FLASK_URL } from '../constants.js';
 import { registerCity } from '../controllers/city.controller.js';
 import { registerStore } from '../controllers/stores.controller.js';
+import {
+	getUsers,
+	registerCustomer,
+} from '../controllers/customer.controller.js';
+import { registerOrder } from '../controllers/order.controller.js';
 
 const router = Router();
 
@@ -25,5 +30,10 @@ router.route('/login').post(loginUser);
 
 router.route('/register-city').post(registerCity);
 router.route('/register-store').post(registerStore);
+
+router.route('/register-customer').post(registerCustomer);
+router.route('/register-order').post(registerOrder);
+
+router.route('/get-customers').post(getUsers);
 
 export default router;

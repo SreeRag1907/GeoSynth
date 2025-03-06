@@ -15,7 +15,6 @@ import Layout from '@/components/layout';
 import LandingPage from '@/pages/landing';
 import HeatmapAnalytics from '@/pages/heatmap-analytics';
 import CompetitorAnalysis from '@/pages/competitor-analysis';
-import LocationExplorer from '@/pages/location-explorer';
 import AIInsightsHub from '@/pages/ai-insights';
 import DataManagement from '@/pages/data-management';
 import ReportsAnalytics from '@/pages/reports';

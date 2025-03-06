@@ -18,6 +18,12 @@ const citySchema = new Schema(
 				ref: 'Store',
 			},
 		],
+		customers: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: 'Customer',
+			},
+		],
 	},
 	{ timestamps: true }
 );

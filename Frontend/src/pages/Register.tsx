@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -33,8 +33,9 @@ const registerSchema = yup.object({
 type RegisterFormData = yup.InferType<typeof registerSchema>;
 
 export function Register() {
-  const { register, isLoading, error, clearError } = useAuthStore();
+  const { register, isLoading, error } = useAuthStore();
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const form = useForm<RegisterFormData>({
     resolver: yupResolver(registerSchema),
@@ -48,6 +49,8 @@ export function Register() {
 
   const onSubmit = async (data: RegisterFormData) => {
     await register(data.name, data.email, data.password);
+    localStorage.setItem('userName', data.name); // Store the user's name in local storage
+    navigate('/dashboard'); // Redirect to the dashboard
   };
 
   return (
