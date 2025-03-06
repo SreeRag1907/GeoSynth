@@ -1,7 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import dashboardScreenshot from "./dashboard-screenshot.png"; // Import the image
-import { Link } from "react-router-dom";
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import dashboardScreenshot from './dashboard-screenshot.png'; // Import the image
+import { Link } from 'react-router-dom';
+import GlobeDemo from '@/components/globe-demo';
+import { Globe } from '@/components/globe';
 
 export default function Hero() {
   return (
@@ -13,22 +15,32 @@ export default function Hero() {
           with Heatmap Analytics
         </h1>
         <p className="mx-auto max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-          Leverage advanced heatmap visualization to analyze order density, delivery delays, and population demographics. Identify underserved areas and make data-driven decisions for new store locations.
+          Leverage advanced heatmap visualization to analyze order density,
+          delivery delays, and population demographics. Identify underserved
+          areas and make data-driven decisions for new store locations.
         </p>
+
+        <div className="relative flex items-center justify-center overflow-hidden rounded-lg border bg-background p-8 md:p-16 h-[20rem] w-full">
+          <Globe className="w-full h-auto max-w-lg" />
+          <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+        </div>
       </div>
       <div className="flex gap-4">
         <Link to="/dashboard">
-        <Button size="lg">
-          Explore Solutions
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+          <Button size="lg">
+            Explore Solutions
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
         </Link>
-        
       </div>
       <div className="mt-8 w-full">
         <div className="rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold mb-4">Explore Our Heatmap</h2>
-          <img src={dashboardScreenshot} alt="Dashboard Screenshot" className="w-[60%] mx-auto h-auto rounded-lg shadow-lg block" />
+          <img
+            src={dashboardScreenshot}
+            alt="Dashboard Screenshot"
+            className="w-[60%] mx-auto h-auto rounded-lg shadow-lg block"
+          />
         </div>
       </div>
     </section>
