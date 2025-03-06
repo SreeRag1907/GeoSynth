@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import dashboardScreenshot from './dashboard-screenshot.png'; // Import the image
 import { Link } from 'react-router-dom';
-import GlobeDemo from '@/components/globe-demo';
 import { Globe } from '@/components/globe';
 
 export default function Hero() {
