@@ -3,7 +3,7 @@ import { loginUser, registerUser } from '../controllers/user.controller.js';
 import axios from 'axios';
 import { FLASK_URL } from '../constants.js';
 import { registerCity } from '../controllers/city.controller.js';
-import { registerStore } from '../controllers/stores.controller.js';
+import { getStores, registerStore } from '../controllers/stores.controller.js';
 import {
 	getUsers,
 	registerCustomer,
@@ -35,5 +35,6 @@ router.route('/register-customer').post(registerCustomer);
 router.route('/register-order').post(registerOrder);
 
 router.route('/get-customers').post(getUsers);
+router.route('/get-stores').post(getStores);
 
 export default router;

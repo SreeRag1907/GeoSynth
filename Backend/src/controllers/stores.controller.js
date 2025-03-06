@@ -55,4 +55,12 @@ const registerStore = AsyncHandler(async (req, res) => {
 		.json(new ApiResponse(200, store, 'store created successfully...'));
 });
 
-export { registerStore };
+const getStores = AsyncHandler(async (req, res) => {
+	const arr = await Store.find();
+
+	// console.log(arr);
+
+	res.status(200).json(new ApiResponse(201, arr, 'thats it'));
+});
+
+export { registerStore, getStores };
