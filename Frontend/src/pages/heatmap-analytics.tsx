@@ -4,13 +4,33 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Slider } from '@/components/ui/slider';
 import { MapPin } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
 
 import GoogleMap from './GoogleMap';
 
 export default function HeatmapAnalytics() {
   const [opacity, setOpacity] = useState([0.7]);
 
-  
+  const highDensityAreas = [
+    { name: 'Mumbai', orders: 4000 },
+    { name: 'Delhi', orders: 3500 },
+    { name: 'Bangalore', orders: 3000 },
+  ];
+
+  const growthZones = [
+    { name: 'Pune', growth: 20 },
+    { name: 'Hyderabad', growth: 25 },
+    { name: 'Chennai', growth: 15 },
+  ];
+
+  const underservedRegions = [
+    { name: 'Nagpur', value: 10 },
+    { name: 'Jaipur', value: 15 },
+    { name: 'Lucknow', value: 20 },
+  ];
+
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
+
   return (
     <div className="space-y-8">
       <div>
@@ -22,7 +42,6 @@ export default function HeatmapAnalytics() {
 
       <div className="grid gap-4 md:grid-cols-4">
         <div className="md:col-span-3">
-          
           <GoogleMap opacity={opacity[0]} />
         </div>
 
@@ -46,7 +65,6 @@ export default function HeatmapAnalytics() {
                   step={0.1}
                 />
               </div>
-             
             </CardContent>
           </Card>
 
@@ -93,26 +111,49 @@ export default function HeatmapAnalytics() {
               <TabsTrigger value="anomalies">Anomalies</TabsTrigger>
             </TabsList>
             <TabsContent value="patterns" className="space-y-4">
-              <div className="grid gap-4 md:grid-cols-3">
-                {['High Density Areas', 'Growth Zones', 'Underserved Regions'].map((pattern) => (
-                  <Card key={pattern}>
-                    <CardHeader>
-                      <CardTitle className="text-sm">{pattern}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">
-                        Analysis details for {pattern.toLowerCase()} will be shown here.
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              <ResponsiveContainer width="100%" height={300}>
+                <LineChart data={highDensityAreas}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Line type="monotone" dataKey="orders" stroke="#8884d8" activeDot={{ r: 8 }} />
+                </LineChart>
+              </ResponsiveContainer>
             </TabsContent>
-            <TabsContent value="trends">
-              Trend analysis will be implemented here
+            <TabsContent value="trends" className="space-y-4">
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={growthZones}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="growth" fill="#82ca9d" />
+                </BarChart>
+              </ResponsiveContainer>
             </TabsContent>
-            <TabsContent value="anomalies">
-              Anomaly detection results will be implemented here
+            <TabsContent value="anomalies" className="space-y-4">
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={underservedRegions}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    dataKey="value"
+                  >
+                    {underservedRegions.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
             </TabsContent>
           </Tabs>
         </CardContent>
