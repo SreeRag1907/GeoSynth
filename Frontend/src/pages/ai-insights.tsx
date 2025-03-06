@@ -71,7 +71,7 @@ export default function AIInsightsHub() {
                   fill="#8884d8"
                   dataKey="value"
                 >
-                  {clusteringData.map((entry, index) => (
+                  {clusteringData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

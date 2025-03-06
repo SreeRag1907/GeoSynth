@@ -31,7 +31,7 @@ export default function GoogleMap({ opacity }: { opacity: number }) {
                 console.log("Predicted stores array:", predictedStoresArray); // Log the array
 
                 // **Now map over the predictedStoresArray (the array, not the whole object)**
-                const predictedLatLng = predictedStoresArray.map(loc => new google.maps.LatLng(loc.latitude, loc.longitude));
+                const predictedLatLng = predictedStoresArray.map((loc: { latitude: number; longitude: number }) => new google.maps.LatLng(loc.latitude, loc.longitude));
                 setPredictedStoreLocations(predictedLatLng);
 
             } catch (error) {
@@ -69,7 +69,7 @@ export default function GoogleMap({ opacity }: { opacity: number }) {
                         },
                     });
 
-                    const circle = new google.maps.Circle({
+                    new google.maps.Circle({
                         map: mapInstance.current,
                         center: { lat: item.Latitude, lng: item.Longitude },
                         radius: 1000, // 1 km radius
